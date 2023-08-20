@@ -1,0 +1,43 @@
+# Ignore compiled files and build artifacts
+*.o
+*.pyc
+__pycache__/
+*.class
+*.jar
+target/
+
+# Ignore IDE and editor specific files
+.idea/
+.vscode/
+*.iml
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore package manager directories and files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+bin
+obj
+Properties
+
+# Ignore sensitive or environment-specific information
+config.ini
+secrets.yml
+
+# Ignore system files and directories
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+ehthumbs_vista.db
+desktop.ini
+
+# Ignore backup and swap files
+*~
+*.swp
