@@ -24,5 +24,10 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
+
+        private void PlayTicTacToeGameView_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

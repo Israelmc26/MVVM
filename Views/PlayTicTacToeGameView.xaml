@@ -5,11 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TicTacToe.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" Width="552">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" MinWidth="300"/>
-            <ColumnDefinition Width="auto" MinWidth="300"/>
+            <ColumnDefinition Width="auto" MinWidth="100"/>
+            <ColumnDefinition Width="auto" MinWidth="100"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
@@ -18,37 +19,58 @@
             </Grid.RowDefinitions>
 
             <UniformGrid Rows="3" Columns="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button Content="Button 1" Width="100" Height="100" Margin="0"/>
-                <Button Content="Button 2" Width="100" Height="100" Margin="0"/>
-                <Button Content="Button 3" Width="100" Height="100" Margin="0"/>
-                <Button Content="Button 4" Width="100" Height="100" Margin="0"/>
-                <Button Content="Button 5" Width="100" Height="100" Margin="0"/>
-                <Button Content="Button 6" Width="100" Height="100" Margin="0"/>
-                <Button Content="Button 7" Width="100" Height="100" Margin="0"/>
-                <Button Content="Button 8" Width="100" Height="100" Margin="0"/>
-                <Button Content="Button 9" Width="100" Height="100" Margin="0"/>
+                <Button x:Name="Button1" FontSize="70" Content=" " Click="Button1_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
+                <Button x:Name="Button2" FontSize="70" Content=" " Click="Button2_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
+                <Button x:Name="Button3" FontSize="70" Content=" " Click="Button3_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
+                <Button x:Name="Button4" FontSize="70" Content=" " Click="Button4_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
+                <Button x:Name="Button5" FontSize="70" Content=" " Click="Button5_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
+                <Button x:Name="Button6" FontSize="70" Content=" " Click="Button6_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
+                <Button x:Name="Button7" FontSize="70" Content=" " Click="Button7_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
+                <Button x:Name="Button8" FontSize="70" Content=" " Click="Button8_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
+                <Button x:Name="Button9" FontSize="70" Content=" " Click="Button9_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
             </UniformGrid>
 
-            <StatusBar Grid.Row="1" Height="30">
-                <StatusBarItem>
-                    <TextBlock Text="Status bar content here." />
-                </StatusBarItem>
-            </StatusBar>
+            
         </Grid>
-        
-        
-        <Grid Grid.Column="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="0" Orientation ="Vertical">
-                    <Button Content="Start Game" />
-                    <Button Content="Help" />
+
+        <Grid Grid.Column="1">
+            <StackPanel Grid.Column="0" HorizontalAlignment= "Left" VerticalAlignment="Top">
+                <Button x:Name="ButtonStartGame" Content="Start Game" Click="ButtonStartGame_Click" />
+                <Button Content="Help" Click="ButtonHelp_Click"/>
+            </StackPanel>
+
+        </Grid>
+        <Grid Grid.Column="2">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" MinHeight="100"/>
+                <RowDefinition Height="auto" MinHeight="100"/>
+               
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <TextBlock Text=" Number of players:"/>
+                    <RadioButton x:Name="RadioButton1player" Content="1 player" Margin="10" GroupName="RadioGroupPlayer" Checked="RadioButtonPlayer_Checked" IsChecked="true"/>
+                    <RadioButton Content="2 players" Margin="10" GroupName="RadioGroupPlayer" Checked="RadioButtonPlayer_Checked"/>
                 </StackPanel>
 
             </Grid>
 
+            <Grid Grid.Row="1">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <TextBlock Text=" Game Level:"/>
+                    <RadioButton x:Name="RadioButtonEasy" Content="Easy" Margin="10" GroupName="RadioGroupLevel"  Checked="RadioButtonLevel_Checked" IsChecked="true"/>
+                    <RadioButton Content="Normal" Margin="10" GroupName="RadioGroupLevel"  Checked="RadioButtonLevel_Checked"/>
+                    <RadioButton Content="Unbeatable" Margin="10" GroupName="RadioGroupLevel"  Checked="RadioButtonLevel_Checked"/>
+                </StackPanel>
+
+            </Grid>
+
+
         </Grid>
+        
+
+    </Grid>
 </UserControl>

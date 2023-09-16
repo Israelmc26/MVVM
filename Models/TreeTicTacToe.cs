@@ -30,7 +30,7 @@ namespace TicTacToe.Model
             gameState = new int[0];
             lastPlay = 0;
             stageNode = 0;
-
+            lastNode = 1;
 
         }//end of constructor without argument
 

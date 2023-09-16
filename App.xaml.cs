@@ -16,7 +16,7 @@ namespace TicTacToe
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            TicTacToeGame ticTacToeGame = new TicTacToeGame();
+            //TicTacToeGame ticTacToeGame = new TicTacToeGame();
             base.OnStartup(e);
         }
       
