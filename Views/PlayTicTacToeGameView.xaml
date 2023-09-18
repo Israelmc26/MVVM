@@ -19,15 +19,15 @@
             </Grid.RowDefinitions>
 
             <UniformGrid Rows="3" Columns="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:Name="Button1" FontSize="70" Content=" " Click="Button1_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
-                <Button x:Name="Button2" FontSize="70" Content=" " Click="Button2_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
-                <Button x:Name="Button3" FontSize="70" Content=" " Click="Button3_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
-                <Button x:Name="Button4" FontSize="70" Content=" " Click="Button4_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
-                <Button x:Name="Button5" FontSize="70" Content=" " Click="Button5_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
-                <Button x:Name="Button6" FontSize="70" Content=" " Click="Button6_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
-                <Button x:Name="Button7" FontSize="70" Content=" " Click="Button7_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
-                <Button x:Name="Button8" FontSize="70" Content=" " Click="Button8_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
-                <Button x:Name="Button9" FontSize="70" Content=" " Click="Button9_Click" Width="100" Height="100" Margin="0" IsEnabled="False" />
+                <Button x:Name="Button1" FontSize="70" Content="{Binding Button1Content, Mode=TwoWay}" Click="Button1_Click" Width="100" Height="100" Margin="0" IsEnabled="{Binding Button1IsEnabled, Mode=TwoWay}" />
+                <Button x:Name="Button2" FontSize="70" Content="{Binding Button2Content, Mode=TwoWay}" Click="Button2_Click" Width="100" Height="100" Margin="0" IsEnabled="{Binding Button2IsEnabled, Mode=TwoWay}" />
+                <Button x:Name="Button3" FontSize="70" Content="{Binding Button3Content, Mode=TwoWay}" Click="Button3_Click" Width="100" Height="100" Margin="0" IsEnabled="{Binding Button3IsEnabled, Mode=TwoWay}" />
+                <Button x:Name="Button4" FontSize="70" Content="{Binding Button4Content, Mode=TwoWay}" Click="Button4_Click" Width="100" Height="100" Margin="0" IsEnabled="{Binding Button4IsEnabled, Mode=TwoWay}" />
+                <Button x:Name="Button5" FontSize="70" Content="{Binding Button5Content, Mode=TwoWay}" Click="Button5_Click" Width="100" Height="100" Margin="0" IsEnabled="{Binding Button5IsEnabled, Mode=TwoWay}" />
+                <Button x:Name="Button6" FontSize="70" Content="{Binding Button6Content, Mode=TwoWay}" Click="Button6_Click" Width="100" Height="100" Margin="0" IsEnabled="{Binding Button6IsEnabled, Mode=TwoWay}" />
+                <Button x:Name="Button7" FontSize="70" Content="{Binding Button7Content, Mode=TwoWay}" Click="Button7_Click" Width="100" Height="100" Margin="0" IsEnabled="{Binding Button7IsEnabled, Mode=TwoWay}" />
+                <Button x:Name="Button8" FontSize="70" Content="{Binding Button8Content, Mode=TwoWay}" Click="Button8_Click" Width="100" Height="100" Margin="0" IsEnabled="{Binding Button8IsEnabled, Mode=TwoWay}" />
+                <Button x:Name="Button9" FontSize="70" Content="{Binding Button9Content, Mode=TwoWay}" Click="Button9_Click" Width="100" Height="100" Margin="0" IsEnabled="{Binding Button9IsEnabled, Mode=TwoWay}" />
             </UniformGrid>
 
             
@@ -50,7 +50,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
-                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                <StackPanel x:Name="RadioButtonNbrOfPlayerSelection" VerticalAlignment="Top" HorizontalAlignment="Left">
                     <TextBlock Text=" Number of players:"/>
                     <RadioButton x:Name="RadioButton1player" Content="1 player" Margin="10" GroupName="RadioGroupPlayer" Checked="RadioButtonPlayer_Checked" IsChecked="true"/>
                     <RadioButton Content="2 players" Margin="10" GroupName="RadioGroupPlayer" Checked="RadioButtonPlayer_Checked"/>
@@ -59,7 +59,7 @@
             </Grid>
 
             <Grid Grid.Row="1">
-                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                <StackPanel x:Name="RadioButtonGameLevelSelection" VerticalAlignment="Top" HorizontalAlignment="Left">
                     <TextBlock Text=" Game Level:"/>
                     <RadioButton x:Name="RadioButtonEasy" Content="Easy" Margin="10" GroupName="RadioGroupLevel"  Checked="RadioButtonLevel_Checked" IsChecked="true"/>
                     <RadioButton Content="Normal" Margin="10" GroupName="RadioGroupLevel"  Checked="RadioButtonLevel_Checked"/>
